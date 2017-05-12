@@ -54,7 +54,7 @@ namespace CasterStats.Views
                 PasswordEntry.Focus();
             }
 
-            // blablabla
+            
 
         }
     }
