@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="CasterStats.Views.MenuPage"
+                  xmlns:local="clr-namespace:CasterStats;assembly=CasterStats"
+                  xmlns:views="clr-namespace:CasterStats.Views;assembly=CasterStats"
+                  MasterBehavior="Popover"
+                  Title="I am the master">
+  <MasterDetailPage.Master>
+    <ContentPage Title="Menu">
+      <ContentPage.Content>
+      <StackLayout Orientation="Vertical">
+          
+        <Button Text="Players" Clicked="Player_Cliked"/>
+        <Button Text="PlatForms" Clicked="Platforms_Cliked"/>
+        <Button Text="Graph" Clicked="Graph_Cliked"/>
+        <Button Text="Map" Clicked="Map_Cliked"/>
+        <Button Text="Stream Grid" Clicked="StreamGrid_Cliked"/>
+        <Button Text="Stream Counter" Clicked="StreamCounter_Cliked"/>
+        <Button Text="Stream Gauges" Clicked="StreamGauge_Cliked"/>
+        <Button Text="Cities" Clicked="Cities_Cliked"/>
+        <Button Text="Countries" Clicked="Country_Cliked"/>
+       
+        
+      </StackLayout>
+      </ContentPage.Content>
+    </ContentPage>
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <views:DashboardManagement/>
+   
+  </MasterDetailPage.Detail>
+</MasterDetailPage>

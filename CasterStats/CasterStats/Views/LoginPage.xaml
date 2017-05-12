@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CasterStats.Views.LoginPage">
+
+  <ContentPage.Content>
+    <StackLayout>
+      <Label Text="CasterStats"
+             Font="30"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"/>
+      <Label Text="User :"
+             HorizontalOptions="Start"
+             VerticalOptions="Center"/>
+      <Entry x:Name="UserEntry"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"/>
+      <Label Text="password :"
+             HorizontalOptions="Start"
+             VerticalOptions="Center"/>
+      <Entry x:Name="PasswordEntry"
+             IsPassword="True"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"/>
+            <Button x:Name="LoginButton"
+              Text="Login"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="Center"
+              Clicked="LoginButton_Cliked"
+              BackgroundColor="Blue"/>
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

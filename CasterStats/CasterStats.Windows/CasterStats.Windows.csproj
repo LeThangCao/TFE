@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Forms.Maps.2.3.3.193\build\win81\Xamarin.Forms.Maps.props" Condition="Exists('..\..\packages\Xamarin.Forms.Maps.2.3.3.193\build\win81\Xamarin.Forms.Maps.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43DD2031-A479-4EDB-957B-F98061B80FBE}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CasterStats.Windows</RootNamespace>
+    <AssemblyName>CasterStats.Windows</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>Windows_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="packages.config" />
+    <None Include="Windows_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <AndroidResource Include="countryIcon\ad.png" />
+    <AndroidResource Include="countryIcon\ae.png" />
+    <AndroidResource Include="countryIcon\af.png" />
+    <AndroidResource Include="countryIcon\ag.png" />
+    <AndroidResource Include="countryIcon\ai.png" />
+    <AndroidResource Include="countryIcon\al.png" />
+    <AndroidResource Include="countryIcon\am.png" />
+    <AndroidResource Include="countryIcon\ao.png" />
+    <AndroidResource Include="countryIcon\ar.png" />
+    <AndroidResource Include="countryIcon\as.png" />
+    <AndroidResource Include="countryIcon\at.png" />
+    <AndroidResource Include="countryIcon\au.png" />
+    <AndroidResource Include="countryIcon\aw.png" />
+    <AndroidResource Include="countryIcon\ax.png" />
+    <AndroidResource Include="countryIcon\az.png" />
+    <AndroidResource Include="countryIcon\ba.png" />
+    <AndroidResource Include="countryIcon\bb.png" />
+    <AndroidResource Include="countryIcon\bd.png" />
+    <AndroidResource Include="countryIcon\be.png" />
+    <AndroidResource Include="countryIcon\bf.png" />
+    <AndroidResource Include="countryIcon\bg.png" />
+    <AndroidResource Include="countryIcon\bh.png" />
+    <AndroidResource Include="countryIcon\bi.png" />
+    <AndroidResource Include="countryIcon\bj.png" />
+    <AndroidResource Include="countryIcon\bl.png" />
+    <AndroidResource Include="countryIcon\bm.png" />
+    <AndroidResource Include="countryIcon\bn.png" />
+    <AndroidResource Include="countryIcon\bo.png" />
+    <AndroidResource Include="countryIcon\br.png" />
+    <AndroidResource Include="countryIcon\bs.png" />
+    <AndroidResource Include="countryIcon\bt.png" />
+    <AndroidResource Include="countryIcon\bw.png" />
+    <AndroidResource Include="countryIcon\by.png" />
+    <AndroidResource Include="countryIcon\bz.png" />
+    <AndroidResource Include="countryIcon\ca.png" />
+    <AndroidResource Include="countryIcon\cc.png" />
+    <AndroidResource Include="countryIcon\cd.png" />
+    <AndroidResource Include="countryIcon\cf.png" />
+    <AndroidResource Include="countryIcon\cg.png" />
+    <AndroidResource Include="countryIcon\ch.png" />
+    <AndroidResource Include="countryIcon\ci.png" />
+    <AndroidResource Include="countryIcon\ck.png" />
+    <AndroidResource Include="countryIcon\cl.png" />
+    <AndroidResource Include="countryIcon\cm.png" />
+    <AndroidResource Include="countryIcon\cn.png" />
+    <AndroidResource Include="countryIcon\co.png" />
+    <AndroidResource Include="countryIcon\cr.png" />
+    <AndroidResource Include="countryIcon\cu.png" />
+    <AndroidResource Include="countryIcon\cv.png" />
+    <AndroidResource Include="countryIcon\cw.png" />
+    <AndroidResource Include="countryIcon\cx.png" />
+    <AndroidResource Include="countryIcon\cy.png" />
+    <AndroidResource Include="countryIcon\cz.png" />
+    <AndroidResource Include="countryIcon\de.png" />
+    <AndroidResource Include="countryIcon\dj.png" />
+    <AndroidResource Include="countryIcon\dk.png" />
+    <AndroidResource Include="countryIcon\dm.png" />
+    <AndroidResource Include="countryIcon\do.png" />
+    <AndroidResource Include="countryIcon\dz.png" />
+    <AndroidResource Include="countryIcon\ec.png" />
+    <AndroidResource Include="countryIcon\ee.png" />
+    <AndroidResource Include="countryIcon\eg.png" />
+    <AndroidResource Include="countryIcon\er.png" />
+    <AndroidResource Include="countryIcon\es.png" />
+    <AndroidResource Include="countryIcon\et.png" />
+    <AndroidResource Include="countryIcon\fi.png" />
+    <AndroidResource Include="countryIcon\fj.png" />
+    <AndroidResource Include="countryIcon\fk.png" />
+    <AndroidResource Include="countryIcon\fm.png" />
+    <AndroidResource Include="countryIcon\fo.png" />
+    <AndroidResource Include="countryIcon\fr.png" />
+    <AndroidResource Include="countryIcon\ga.png" />
+    <AndroidResource Include="countryIcon\gb.png" />
+    <AndroidResource Include="countryIcon\gd.png" />
+    <AndroidResource Include="countryIcon\ge.png" />
+    <AndroidResource Include="countryIcon\gg.png" />
+    <AndroidResource Include="countryIcon\gh.png" />
+    <AndroidResource Include="countryIcon\gi.png" />
+    <AndroidResource Include="countryIcon\gl.png" />
+    <AndroidResource Include="countryIcon\gm.png" />
+    <AndroidResource Include="countryIcon\gn.png" />
+    <AndroidResource Include="countryIcon\gq.png" />
+    <AndroidResource Include="countryIcon\gr.png" />
+    <AndroidResource Include="countryIcon\gs.png" />
+    <AndroidResource Include="countryIcon\gt.png" />
+    <AndroidResource Include="countryIcon\gu.png" />
+    <AndroidResource Include="countryIcon\gw.png" />
+    <AndroidResource Include="countryIcon\gy.png" />
+    <AndroidResource Include="countryIcon\hk.png" />
+    <AndroidResource Include="countryIcon\hn.png" />
+    <AndroidResource Include="countryIcon\hr.png" />
+    <AndroidResource Include="countryIcon\ht.png" />
+    <AndroidResource Include="countryIcon\hu.png" />
+    <AndroidResource Include="countryIcon\id.png" />
+    <AndroidResource Include="countryIcon\ie.png" />
+    <AndroidResource Include="countryIcon\il.png" />
+    <AndroidResource Include="countryIcon\im.png" />
+    <AndroidResource Include="countryIcon\in.png" />
+    <AndroidResource Include="countryIcon\io.png" />
+    <AndroidResource Include="countryIcon\iq.png" />
+    <AndroidResource Include="countryIcon\ir.png" />
+    <AndroidResource Include="countryIcon\is.png" />
+    <AndroidResource Include="countryIcon\it.png" />
+    <AndroidResource Include="countryIcon\je.png" />
+    <AndroidResource Include="countryIcon\jm.png" />
+    <AndroidResource Include="countryIcon\jo.png" />
+    <AndroidResource Include="countryIcon\jp.png" />
+    <AndroidResource Include="countryIcon\ke.png" />
+    <AndroidResource Include="countryIcon\kg.png" />
+    <AndroidResource Include="countryIcon\kh.png" />
+    <AndroidResource Include="countryIcon\ki.png" />
+    <AndroidResource Include="countryIcon\km.png" />
+    <AndroidResource Include="countryIcon\kn.png" />
+    <AndroidResource Include="countryIcon\kp.png" />
+    <AndroidResource Include="countryIcon\kr.png" />
+    <AndroidResource Include="countryIcon\kw.png" />
+    <AndroidResource Include="countryIcon\ky.png" />
+    <AndroidResource Include="countryIcon\kz.png" />
+    <AndroidResource Include="countryIcon\la.png" />
+    <AndroidResource Include="countryIcon\lb.png" />
+    <AndroidResource Include="countryIcon\lc.png" />
+    <AndroidResource Include="countryIcon\li.png" />
+    <AndroidResource Include="countryIcon\lk.png" />
+    <AndroidResource Include="countryIcon\lr.png" />
+    <AndroidResource Include="countryIcon\ls.png" />
+    <AndroidResource Include="countryIcon\lt.png" />
+    <AndroidResource Include="countryIcon\lu.png" />
+    <AndroidResource Include="countryIcon\lv.png" />
+    <AndroidResource Include="countryIcon\ly.png" />
+    <AndroidResource Include="countryIcon\ma.png" />
+    <AndroidResource Include="countryIcon\mc.png" />
+    <AndroidResource Include="countryIcon\md.png" />
+    <AndroidResource Include="countryIcon\me.png" />
+    <AndroidResource Include="countryIcon\mg.png" />
+    <AndroidResource Include="countryIcon\mh.png" />
+    <AndroidResource Include="countryIcon\mk.png" />
+    <AndroidResource Include="countryIcon\ml.png" />
+    <AndroidResource Include="countryIcon\mm.png" />
+    <AndroidResource Include="countryIcon\mn.png" />
+    <AndroidResource Include="countryIcon\mo.png" />
+    <AndroidResource Include="countryIcon\mp.png" />
+    <AndroidResource Include="countryIcon\mq.png" />
+    <AndroidResource Include="countryIcon\mr.png" />
+    <AndroidResource Include="countryIcon\ms.png" />
+    <AndroidResource Include="countryIcon\mt.png" />
+    <AndroidResource Include="countryIcon\mu.png" />
+    <AndroidResource Include="countryIcon\mv.png" />
+    <AndroidResource Include="countryIcon\mw.png" />
+    <AndroidResource Include="countryIcon\mx.png" />
+    <AndroidResource Include="countryIcon\my.png" />
+    <AndroidResource Include="countryIcon\mz.png" />
+    <AndroidResource Include="countryIcon\na.png" />
+    <AndroidResource Include="countryIcon\nc.png" />
+    <AndroidResource Include="countryIcon\ne.png" />
+    <AndroidResource Include="countryIcon\nf.png" />
+    <AndroidResource Include="countryIcon\ng.png" />
+    <AndroidResource Include="countryIcon\ni.png" />
+    <AndroidResource Include="countryIcon\nl.png" />
+    <AndroidResource Include="countryIcon\no.png" />
+    <AndroidResource Include="countryIcon\np.png" />
+    <AndroidResource Include="countryIcon\nr.png" />
+    <AndroidResource Include="countryIcon\nu.png" />
+    <AndroidResource Include="countryIcon\nz.png" />
+    <AndroidResource Include="countryIcon\om.png" />
+    <AndroidResource Include="countryIcon\pa.png" />
+    <AndroidResource Include="countryIcon\pe.png" />
+    <AndroidResource Include="countryIcon\pf.png" />
+    <AndroidResource Include="countryIcon\pg.png" />
+    <AndroidResource Include="countryIcon\ph.png" />
+    <AndroidResource Include="countryIcon\pk.png" />
+    <AndroidResource Include="countryIcon\pl.png" />
+    <AndroidResource Include="countryIcon\pn.png" />
+    <AndroidResource Include="countryIcon\pr.png" />
+    <AndroidResource Include="countryIcon\ps.png" />
+    <AndroidResource Include="countryIcon\pt.png" />
+    <AndroidResource Include="countryIcon\pw.png" />
+    <AndroidResource Include="countryIcon\py.png" />
+    <AndroidResource Include="countryIcon\qa.png" />
+    <AndroidResource Include="countryIcon\re.png" />
+    <AndroidResource Include="countryIcon\ro.png" />
+    <AndroidResource Include="countryIcon\rs.png" />
+    <AndroidResource Include="countryIcon\ru.png" />
+    <AndroidResource Include="countryIcon\rw.png" />
+    <AndroidResource Include="countryIcon\sa.png" />
+    <AndroidResource Include="countryIcon\sb.png" />
+    <AndroidResource Include="countryIcon\sc.png" />
+    <AndroidResource Include="countryIcon\sd.png" />
+    <AndroidResource Include="countryIcon\se.png" />
+    <AndroidResource Include="countryIcon\sg.png" />
+    <AndroidResource Include="countryIcon\sh.png" />
+    <AndroidResource Include="countryIcon\si.png" />
+    <AndroidResource Include="countryIcon\sk.png" />
+    <AndroidResource Include="countryIcon\sl.png" />
+    <AndroidResource Include="countryIcon\sm.png" />
+    <AndroidResource Include="countryIcon\sn.png" />
+    <AndroidResource Include="countryIcon\so.png" />
+    <AndroidResource Include="countryIcon\sr.png" />
+    <AndroidResource Include="countryIcon\ss.png" />
+    <AndroidResource Include="countryIcon\st.png" />
+    <AndroidResource Include="countryIcon\sv.png" />
+    <AndroidResource Include="countryIcon\sx.png" />
+    <AndroidResource Include="countryIcon\sy.png" />
+    <AndroidResource Include="countryIcon\sz.png" />
+    <AndroidResource Include="countryIcon\tc.png" />
+    <AndroidResource Include="countryIcon\td.png" />
+    <AndroidResource Include="countryIcon\tf.png" />
+    <AndroidResource Include="countryIcon\tg.png" />
+    <AndroidResource Include="countryIcon\th.png" />
+    <AndroidResource Include="countryIcon\tj.png" />
+    <AndroidResource Include="countryIcon\tk.png" />
+    <AndroidResource Include="countryIcon\tl.png" />
+    <AndroidResource Include="countryIcon\tm.png" />
+    <AndroidResource Include="countryIcon\tn.png" />
+    <AndroidResource Include="countryIcon\to.png" />
+    <AndroidResource Include="countryIcon\tr.png" />
+    <AndroidResource Include="countryIcon\tt.png" />
+    <AndroidResource Include="countryIcon\tv.png" />
+    <AndroidResource Include="countryIcon\tw.png" />
+    <AndroidResource Include="countryIcon\tz.png" />
+    <AndroidResource Include="countryIcon\ua.png" />
+    <AndroidResource Include="countryIcon\ug.png" />
+    <AndroidResource Include="countryIcon\us.png" />
+    <AndroidResource Include="countryIcon\uy.png" />
+    <AndroidResource Include="countryIcon\uz.png" />
+    <AndroidResource Include="countryIcon\va.png" />
+    <AndroidResource Include="countryIcon\vc.png" />
+    <AndroidResource Include="countryIcon\ve.png" />
+    <AndroidResource Include="countryIcon\vg.png" />
+    <AndroidResource Include="countryIcon\vi.png" />
+    <AndroidResource Include="countryIcon\vn.png" />
+    <AndroidResource Include="countryIcon\vu.png" />
+    <AndroidResource Include="countryIcon\ws.png" />
+    <AndroidResource Include="countryIcon\ye.png" />
+    <AndroidResource Include="countryIcon\za.png" />
+    <AndroidResource Include="countryIcon\zm.png" />
+    <AndroidResource Include="countryIcon\zw.png" />
+    <Content Include="selectIcon.png" />
+    <Content Include="warningIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CasterStats\CasterStats.csproj">
+      <Project>{b97daaa2-ad8c-47de-aa3e-8adc398e82ec}</Project>
+      <Name>CasterStats</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ExifLib, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ExifLib.PCL.1.0.1\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+Xamarin.iOS10+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PCLStorage, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PCLStorage.1.0.2\lib\portable-win8+wpa81\PCLStorage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PCLStorage.1.0.2\lib\portable-win8+wpa81\PCLStorage.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>..\..\packages\SkiaSharp.1.55.1\lib\portable-net45+win8+wpa81+wp8\SkiaSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.Forms">
+      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.55.1\lib\portable-net45+win8+wpa81+wp8\SkiaSharp.Views.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.Data.Portable">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.2.0.40\Xamarin\lib\pcl\Syncfusion.Data.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.GridCommon.Portable">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.2.0.40\Xamarin\lib\pcl\Syncfusion.GridCommon.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfChart.UWP">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.2.0.40\Xamarin\lib\uwp\Syncfusion.SfChart.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfChart.XForms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.2.0.40\Xamarin\lib\pcl\Syncfusion.SfChart.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfChart.XForms.UWP">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.2.0.40\Xamarin\lib\uwp\Syncfusion.SfChart.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfDataGrid.XForms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.2.0.40\Xamarin\lib\pcl\Syncfusion.SfDataGrid.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfDataGrid.XForms.UWP">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.2.0.40\Xamarin\lib\uwp\Syncfusion.SfDataGrid.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfInput.UWP">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.2.0.40\Xamarin\lib\uwp\Syncfusion.SfInput.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.2.0.40\Xamarin\lib\pcl\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms.UWP">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.2.0.40\Xamarin\lib\uwp\Syncfusion.SfNumericTextBox.XForms.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfShared.UWP">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Syncfusion\Essential Studio\15.2.0.40\Xamarin\lib\uwp\Syncfusion.SfShared.UWP.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\win81\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.3.3.193\lib\win81\Xamarin.Forms.Maps.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\win81\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.WinRT, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\win81\Xamarin.Forms.Platform.WinRT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.WinRT.Tablet, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\win81\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XLabs.Core, Version=2.0.5782.12218, Culture=neutral, PublicKeyToken=d65109b36e5040e4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XLabs.Core.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XLabs.Forms, Version=2.0.5782.12218, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XLabs.Forms.2.0.5782\lib\portable-net45+netcore45+wpa81+wp8\XLabs.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XLabs.Ioc, Version=2.0.5782.12218, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XLabs.IoC.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Ioc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XLabs.Platform, Version=2.0.5782.12218, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XLabs.Platform.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XLabs.Serialization, Version=2.0.5782.15703, Culture=neutral, PublicKeyToken=d65109b36e5040e4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XLabs.Serialization.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.Maps.2.3.3.193\build\win81\Xamarin.Forms.Maps.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.Maps.2.3.3.193\build\win81\Xamarin.Forms.Maps.props'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.Maps.2.3.3.193\build\win81\Xamarin.Forms.Maps.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.Maps.2.3.3.193\build\win81\Xamarin.Forms.Maps.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Xamarin.Forms.Maps.2.3.3.193\build\win81\Xamarin.Forms.Maps.targets" Condition="Exists('..\..\packages\Xamarin.Forms.Maps.2.3.3.193\build\win81\Xamarin.Forms.Maps.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
